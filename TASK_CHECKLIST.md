@@ -1,7 +1,7 @@
 # IT342 - G3 - Dalapo - Task CheckList
 
 # DONE
-    * 
+    * Initialize github repository
 
 # IN-PROGRESS
     * Front-end
