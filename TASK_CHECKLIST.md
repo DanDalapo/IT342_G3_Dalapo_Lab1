@@ -1,5 +1,6 @@
 # IT342 - G3 - Dalapo - Task CheckList
 
+# 02/07/28
 # DONE
     * Initialize github repository
 
