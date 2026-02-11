@@ -24,8 +24,21 @@
 
 # 02/11/26
 # DONE
-    * backend User Entity CRUD
+    * []backend User Entity CRUD
+    * []initialize front-end
 
 # IN-PROGRESS
     * Front-end
-    * Documentation 
+    * Documentation
+
+# TODO
+    * Back-end
+        - Database connection
+        - Password encryption
+        
+    * Front-end
+        - Login UI
+        - Registratin UI
+
+    * Documentation
+        - Update FRS
