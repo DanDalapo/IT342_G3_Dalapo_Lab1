@@ -11,7 +11,7 @@ Backend:
 - BCrypt (Password Hashing)
 - Maven (Dependency Management)
 
-Frontend
+Frontend:
 - ReactJS
 - Axios (API Requests)
 - React Router (Navigation)

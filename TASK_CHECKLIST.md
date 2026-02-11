@@ -25,8 +25,8 @@
 # 02/11/26
 # DONE
     * backend User Entity CRUD (commit 3dd90f0)
-    * initialize front-end (commit )
-    * Login Page UI (commit )
+    * initialize front-end (commit cb17006)
+    * Login Page UI (commit 181b861)
 
 # IN-PROGRESS
     * Front-end
