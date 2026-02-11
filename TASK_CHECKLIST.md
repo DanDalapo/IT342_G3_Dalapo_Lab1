@@ -26,6 +26,7 @@
 # DONE
     * backend User Entity CRUD (commit 3dd90f0)
     * initialize front-end (commit )
+    * Login Page UI (commit )
 
 # IN-PROGRESS
     * Front-end
@@ -37,7 +38,6 @@
         - Password encryption
         
     * Front-end
-        - Login UI
         - Registratin UI
 
     * Documentation
