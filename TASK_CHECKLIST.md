@@ -20,4 +20,26 @@
         - Registratin UI
 
     * Documentation
-        - Update FRS    
+        - Update FRS
+
+# 02/11/26
+# DONE
+    * Initialize github repository
+
+# IN-PROGRESS
+    * Front-end
+    * Back-end
+    * Documentation 
+
+# TODO
+    * Back-end
+        - Initalize spring boot application
+        - Database connection
+        - Password encryption
+        
+    * Front-end
+        - Login UI
+        - Registratin UI
+
+    * Documentation
+        - Update FRS
