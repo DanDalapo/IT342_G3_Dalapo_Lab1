@@ -2,13 +2,12 @@
     display: flex;
     height: 100vh;
     width: 100vw;
-    background-color: #050505; /* Deep black */
+    background-color: #050505;
     font-family: 'Inter', sans-serif;
     color: #ffffff;
     overflow: hidden;
 }
 
-/* LEFT SIDE - FORM */
 .login-left {
     flex: 1;
     display: flex;
@@ -16,6 +15,10 @@
     justify-content: center;
     padding: 0 8%;
     max-width: 500px;
+    background-color: #050505; 
+    border-radius: 0 40px 40px 0;
+    z-index: 2;
+    box-shadow: 15px 0 40px rgba(0, 0, 0, 0.8);
 }
 
 .logo-container {
@@ -32,7 +35,6 @@
     margin-bottom: 2rem;
 }
 
-/* INPUT GROUPS */
 .input-group {
     margin-bottom: 1.2rem;
 }
@@ -58,21 +60,17 @@
 
 .styled-input {
     width: 100%;
-    background-color: #111; /* Very dark gray */
+    background-color: #111;
     border: 1px solid #333;
-    padding: 12px 12px 12px 40px; /* Padding left for icon */
+    padding: 12px 12px 12px 40px;
     border-radius: 4px;
     color: white;
     font-size: 0.95rem;
     outline: none;
     transition: border-color 0.2s;
 }
+.styled-input:focus { border-color: #555; }
 
-.styled-input:focus {
-    border-color: #555;
-}
-
-/* BUTTONS */
 .login-btn {
     width: 100%;
     background-color: white;
@@ -85,44 +83,13 @@
     margin-top: 1rem;
     transition: opacity 0.2s;
 }
+.login-btn:hover { opacity: 0.9; }
+.signup-link { text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #666; }
+.signup-link a { color: #fff; text-decoration: none; margin-left: 5px; }
+.divider { display: flex; align-items: center; margin: 1.5rem 0; color: #444; font-size: 0.8rem; }
+.divider::before, .divider::after { content: ""; flex: 1; border-bottom: 1px solid #333; }
+.divider span { padding: 0 10px; }
 
-.login-btn:hover {
-    opacity: 0.9;
-}
-
-.signup-link {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    color: #666;
-}
-
-.signup-link a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 5px;
-}
-
-/* DIVIDER */
-.divider {
-    display: flex;
-    align-items: center;
-    margin: 1.5rem 0;
-    color: #444;
-    font-size: 0.8rem;
-}
-
-.divider::before, .divider::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid #333;
-}
-
-.divider span {
-    padding: 0 10px;
-}
-
-/* GITHUB BUTTON */
 .github-btn {
     width: 100%;
     background-color: transparent;
@@ -143,25 +110,35 @@
     background-color: #111;
 }
 
-/* RIGHT SIDE - IMAGE */
 .login-right {
-    flex: 1.2; /* Slightly wider than the form */
+    flex: 1.2;
     background-color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    margin-left: -40px; 
+    z-index: 1; 
 }
 
-/* This simulates the 'columns' image. 
-   Replace 'url(...)' with your actual image path if you have the file. */
 .art-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-    filter: grayscale(100%) contrast(1.2);
-    /* Placeholder gradient if you don't have the image yet */
-    background: radial-gradient(circle at center, #222 0%, #000 100%); 
+    background: linear-gradient(-45deg,#ffffff, #e0e0e0, #aaaaaa,#555555,#aaaaaa,#e0e0e0);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    opacity: 0.9;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

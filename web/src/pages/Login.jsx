@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Login.css';
+import './css/Login.css'; 
 
-import { FiMail, FiLock, FiGithub } from 'react-icons/fi';
-import { RiinfinityLine } from 'react-icons/ri';
+import { FiMail, FiLock } from 'react-icons/fi';
 
 const Login = () => {
-    
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -14,32 +12,24 @@ const Login = () => {
     
     const [message, setMessage] = useState('');
 
-    // Handle input changes
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // Handle Form Submission
     const handleLogin = async (e) => {
         e.preventDefault();
-        setMessage(''); // Clear previous messages
+        setMessage('');
 
         try {
-            // This URL must match your Spring Boot Controller
-            const response = await axios.post('http://localhost:3000/users/login', {
+            const response = await axios.post('http://localhost:8080/users/login', {
                 email: formData.email,
                 password: formData.password
             });
-
-            // If successful
             console.log("Login Success:", response.data);
             alert(`Welcome back, ${response.data.firstName}!`);
-            // Here you would normally redirect using: navigate('/dashboard');
-
         } catch (error) {
-            // If error (401 or 404)
             if (error.response) {
-                setMessage(error.response.data); // "Invalid Email or Password"
+                setMessage(error.response.data);
             } else {
                 setMessage("Server error. Is the backend running?");
             }
@@ -48,15 +38,13 @@ const Login = () => {
 
     return (
         <div className="login-container">
-            {/* LEFT SIDE - FORM */}
             <div className="login-left">
-                <div className="logo-container">
-                    <RiinfinityLine className="logo-icon" />
+
+                <div className="login-header">
+                    <h2>Login page</h2>
                 </div>
                 
                 <form onSubmit={handleLogin}>
-                    
-                    {/* Email Field */}
                     <div className="input-group">
                         <label className="input-label">Email</label>
                         <div className="input-wrapper">
@@ -73,7 +61,6 @@ const Login = () => {
                         </div>
                     </div>
 
-                    {/* Password Field */}
                     <div className="input-group">
                         <label className="input-label">Password</label>
                         <div className="input-wrapper">
@@ -90,33 +77,18 @@ const Login = () => {
                         </div>
                     </div>
 
-                    {/* Error Message Display */}
                     {message && <p style={{color: 'red', fontSize: '0.8rem', marginTop: '5px'}}>{message}</p>}
 
                     <button type="submit" className="login-btn">Login</button>
                     
                     <div className="signup-link">
                         Don't have an account? <a href="/signup">Sign up</a>
-                    </div>
-
-                    <div className="divider">
-                        <span>or</span>
-                    </div>
-
-                    <button type="button" className="github-btn">
-                        <FiGithub /> Login with Github
-                    </button>
+                    </div>                    
                 </form>
             </div>
 
-            {/* RIGHT SIDE - IMAGE */}
             <div className="login-right">
-                {/* If you have the image file, import it at the top: import bgImg from '../assets/img.png'
-                   and use: <img src={bgImg} alt="Art" className="art-image" />
-                */}
-                <div className="art-image">
-                   {/* This div uses the CSS gradient placeholder currently */}
-                </div>
+                <div className="art-image"></div>
             </div>
         </div>
     );
