@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './css/Login.css'; 
 
 import { FiMail, FiLock } from 'react-icons/fi';
@@ -82,7 +83,7 @@ const Login = () => {
                     <button type="submit" className="login-btn">Login</button>
                     
                     <div className="signup-link">
-                        Don't have an account? <a href="/signup">Sign up</a>
+                        Don't have an account? <Link to="/signup">Sign up</Link>
                     </div>                    
                 </form>
             </div>
