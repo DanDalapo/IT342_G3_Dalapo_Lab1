@@ -27,13 +27,12 @@ const Signup = () => {
         setMessage('');
 
         try {
-            await axios.post('http://localhost:8080/users', {
+            await axios.post('http://localhost:8080/api/auth/register', { 
                 firstName: formData.firstName,
                 lastName: formData.lastName,
                 dateOfBirth: formData.dateOfBirth,
                 email: formData.email,
-                password: formData.password,
-                registered: true 
+                password: formData.password
             });
             
             alert('Registration successful! You can now log in.');

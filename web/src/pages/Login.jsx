@@ -22,11 +22,13 @@ const Login = () => {
         setMessage('');
 
         try {
-            const response = await axios.post('http://localhost:8080/users/login', {
+            const response = await axios.post('http://localhost:8080/api/auth/login', {
                 email: formData.email,
                 password: formData.password
             });
+            
             console.log("Login Success:", response.data);
+            
             alert(`Welcome back, ${response.data.firstName}!`);
         } catch (error) {
             if (error.response) {
