@@ -7,15 +7,17 @@
     * Login Page UI (commit 181b861)
     * Registration / Signup UI (0d65fa3)
     * Backend database connection (35dda4f)
+    * Dashboard UI ()
+    * Logout funtionality ()
 
 # IN-PROGRESS
     * Front-end
     * Documentation 
 
 # TODO
-    * Front-end
-        - Dashboard UI
-        - Logout funtionality
+    * mobile
+        - Front-end
+        - Back-end connection
 
     * Documentation
         - Update FRS
