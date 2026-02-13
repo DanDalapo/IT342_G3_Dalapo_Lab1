@@ -3,15 +3,14 @@
 # DONE
     * Initialize github repository (commit fe4457d)
     * Backend User Entity CRUD (commit 3dd90f0)
-    * initialize front-end (commit cb17006)
+    * Initialize front-end (commit cb17006)
     * Login Page UI (commit 181b861)
     * Registration / Signup UI (0d65fa3)
     * Backend database connection (35dda4f)
-    * Dashboard UI ()
-    * Logout funtionality ()
+    * Dashboard UI (43ddf5a)
+    * Logout funtionality (43ddf5a)
 
 # IN-PROGRESS
-    * Front-end
     * Documentation 
 
 # TODO
