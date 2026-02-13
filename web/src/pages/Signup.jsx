@@ -27,7 +27,7 @@ const Signup = () => {
         setMessage('');
 
         try {
-            await axios.post('http://localhost:8080/api/auth/register', { 
+            const response = await axios.post('http://localhost:8080/api/auth/register', {
                 firstName: formData.firstName,
                 lastName: formData.lastName,
                 dateOfBirth: formData.dateOfBirth,
@@ -35,9 +35,9 @@ const Signup = () => {
                 password: formData.password
             });
             
-            alert('Registration successful! You can now log in.');
-            navigate('/'); 
-
+            localStorage.setItem('user', JSON.stringify(response.data));
+            
+            navigate('/dashboard'); 
         } catch (error) {
             if (error.response) {
                 setMessage(error.response.data || "Registration failed");

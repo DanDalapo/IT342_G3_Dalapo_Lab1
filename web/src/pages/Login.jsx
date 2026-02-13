@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './css/Login.css'; 
 
 import { FiMail, FiLock } from 'react-icons/fi';
 
 const Login = () => {
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -27,12 +29,13 @@ const Login = () => {
                 password: formData.password
             });
             
-            console.log("Login Success:", response.data);
+            localStorage.setItem('user', JSON.stringify(response.data));
             
-            alert(`Welcome back, ${response.data.firstName}!`);
+            navigate('/dashboard'); 
+
         } catch (error) {
             if (error.response) {
-                setMessage(error.response.data);
+                setMessage(error.response.data || "Invalid email or password");
             } else {
                 setMessage("Server error. Is the backend running?");
             }
