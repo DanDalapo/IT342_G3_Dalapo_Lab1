@@ -9,6 +9,7 @@
     * Backend database connection (commit 35dda4f)
     * Dashboard UI (commit 43ddf5a)
     * Logout funtionality (commit 43ddf5a)
+    * Initialized mobile (commit 4c89bee)
 
 # IN-PROGRESS
     * mobile
