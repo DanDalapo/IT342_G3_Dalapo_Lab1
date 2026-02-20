@@ -12,11 +12,10 @@
     * Initialized mobile (commit 4c89bee)
     * Mobile: Frontend Login UI (commit 5e028b7)
     * Mobile: Backend connection (commit 5e028b7)
+    * Mobile: Dashboard UI (commit 5b341e1)    
+    * Mobile: Logout implementation (commit 5b341e1)    
 
 # IN-PROGRESS
-    * mobile
-        - Front-end dashboard and logout 
-
     * Documentation 
 
 # TODO
