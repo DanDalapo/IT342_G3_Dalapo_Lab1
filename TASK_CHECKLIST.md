@@ -10,18 +10,15 @@
     * Dashboard UI (commit 43ddf5a)
     * Logout funtionality (commit 43ddf5a)
     * Initialized mobile (commit 4c89bee)
+    * Mobile: Frontend Login UI (commit 5e028b7)
+    * Mobile: Backend connection (commit 5e028b7)
 
 # IN-PROGRESS
     * mobile
-        - Front-end 
-        - Back-end connection
+        - Front-end dashboard and logout 
 
     * Documentation 
 
 # TODO
-    * mobile
-        - Front-end
-        - Back-end connection
-
     * Documentation
         - Update FRS
