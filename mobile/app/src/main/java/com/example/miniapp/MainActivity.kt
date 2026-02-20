@@ -53,9 +53,20 @@ class MainActivity : AppCompatActivity() {
                     if (response.isSuccessful && response.body() != null) {
                         // HTTP 200 OK: Login worked!
                         val user = response.body()!!
-                        Toast.makeText(this@MainActivity, "Welcome back, ${user.firstName}!", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@MainActivity, "Welcome back, ${user.firstName}!", Toast.LENGTH_SHORT).show()
 
-                        // NOTE: Later on, you would put an Intent here to navigate to a "Home" screen!
+                        // Navigate to the Dashboard
+                        val intent = Intent(this@MainActivity, DashboardActivity::class.java)
+
+                        // Pass the user's name to the dashboard so we can display it!
+                        intent.putExtra("USER_FIRST_NAME", user.firstName)
+                        intent.putExtra("USER_LAST_NAME", user.lastName)
+                        intent.putExtra("USER_EMAIL", user.email)
+
+                        startActivity(intent)
+
+                        // CRITICAL: Close the Login screen so they can't hit the phone's "Back" button to return to it
+                        finish()
                     } else {
                         // HTTP 401 / 403: Wrong password or email
                         Toast.makeText(this@MainActivity, "Login failed. Check your credentials.", Toast.LENGTH_SHORT).show()
